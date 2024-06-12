@@ -9,10 +9,10 @@ class TreeNode:
         self.right = right
 
 class Solution:
-    def isSameTree(self, p: Optional[TreeNode], q: Optional[TreeNode]) -> bool:
-        if p == None or q == None:
-            return p == q
-        if p.val != q.val:
+    def isSubtree(self, root: Optional[TreeNode], subRoot: Optional[TreeNode]) -> bool:
+        if root == None or subRoot == None:
             return False
-        return self.isSameTree(p.left, q.left) and self.isSameTree(p.right, q.right)
+
+        if root.val == subRoot.val:
+
         
